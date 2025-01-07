@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>KiwiHaul - Listing</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+</head>
+<style>
+    /* Additional CSS for improved spacing */
+    .page-heading {
+        padding: 15s0px 200px;
+        margin-bottom: 50px;
+    }
+
+    .service-dropdown {
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .service-dropdown label {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .listing-page {
+        padding: 60px 0;
+    }
+
+    .naccs {
+        margin-bottom: 60px;
+    }
+
+    .menu .thumb {
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .registration-section {
+        background: #f7f7f7;
+        padding: 60px 30px;
+        margin-top: 60px;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    .registration-section h3 {
+        margin-bottom: 25px;
+        color: #2a2a2a;
+    }
+
+    .registration-section p {
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #666;
+    }
+
+    .main-button {
+        display: inline-block;
+        background-color: #2a2a2a;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 12px 30px;
+        border-radius: 25px;
+        transition: all .3s;
+        margin-top: 15px;
+        text-decoration: none;
+    }
+
+    .main-button:hover {
+        background-color: #4a4a4a;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    footer {
+        margin-top: 80px;
+        padding: 60px 0;
+        background: #f9f9f9;
+    }
+
+    footer .helpful-links {
+        margin-bottom: 40px;
+    }
+
+    footer .helpful-links h4 {
+        margin-bottom: 25px;
+    }
+
+    footer .helpful-links ul {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    footer .helpful-links ul li {
+        margin-bottom: 12px;
+    }
+
+    footer .contact-us {
+        margin-bottom: 40px;
+    }
+
+    footer .contact-us h4 {
+        margin-bottom: 25px;
+    }
+
+    footer .contact-us p {
+        margin-bottom: 20px;
+    }
+
+    .listing-item {
+        margin-bottom: 30px;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        background: #fff;
+    }
+
+    #listingsContainer {
+        margin-top: 20px;
+    }
+
+    .sub-footer {
+        margin-top: 40px;
+        padding-top: 40px;
+        border-top: 1px solid #eee;
+        text-align: center;
+    }
+
+    /* Additional responsive improvements */
+    @media (max-width: 768px) {
+        .page-heading {
+            padding: 40px 0;
+        }
+
+        .registration-section {
+            padding: 30px 20px;
+        }
+
+        .listing-item {
+            padding: 20px;
+        }
+    }
+</style>
+
+<body>
+<!-- ***** Preloader Start ***** -->
+<div id="js-preloader" class="js-preloader">
+  <div class="preloader-inner">
+    <span class="dot"></span>
+    <div class="dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>
+<!-- ***** Preloader End ***** -->
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <!-- ***** Logo Start ***** -->
+          <a href="index.html" class="logo">
+          </a>
+          <!-- ***** Logo End ***** -->
+          <!-- ***** Menu Start ***** -->
+          <ul class="nav">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="category.html">Category</a></li>
+            <li><a href="listing.html">Listing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><div class="main-white-button"><a href="register.html"><i class="fa fa-plus"></i> Register Now</a></div></li>
+          </ul>
+          <a class='menu-trigger'>
+              <span>Menu</span>
+          </a>
+          <!-- ***** Menu End ***** -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ***** Header Area End ***** -->
+
+<!-- Page Heading -->
+<div class="page-heading">
+  <div class="container">
+    <div class="row">
+      <!-- Text Section -->
+      <div class="col-lg-8">
+        <div class="top-text header-text">
+          <h6>Available Transportation Services</h6>
+          <h2>Trucks, Utes, Trailers, and More</h2>
+        </div>
+      </div>
+      <!-- Dropdown Section -->
+      <div class="col-lg-4">
+        <div class="service-dropdown">
+          <label for="chooseCategory">Select Type of Service</label>
+          <select name="service" class="form-select" aria-label="Default select example" id="chooseCategory" onchange="filterListings()">
+            <option selected>Type of Service</option>
+            <option value="Long-Distance Driver">Long-Distance Driver</option>
+            <option value="Car Hauler Trailer">Car Hauler Trailer</option>
+            <option value="Enclosed Cargo Trailer">Enclosed Cargo Trailer</option>
+            <option value="Utility Trailer">Utility Trailer</option>
+            <option value="Experienced Driver">Experienced Driver</option>
+            <option value="Local Delivery Driver">Local Delivery Driver</option>
+            <option value="Compact Cargo Truck">Compact Cargo Truck</option>
+            <option value="Heavy Duty Pickup">Heavy Duty Pickup</option>
+            <option value="Flatbed Delivery Truck">Flatbed Delivery Truck</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="listing-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="naccs">
+          <div class="grid">
+            <div class="row">
+              <!-- Categories Menu -->
+              <div class="col-lg-3">
+                <div class="menu">
+                  <div class="first-thumb active">
+                    <div class="thumb">
+                      <span class="icon"><img src="assets/images/truck-icon.png" alt=""></span>
+                      Trucks
+                    </div>
+                  </div>
+                  <div>
+                    <div class="thumb">
+                      <span class="icon"><img src="assets/images/ute-icon.png" alt=""></span>
+                      Utes
+                    </div>
+                  </div>
+                  <div>
+                    <div class="thumb">
+                      <span class="icon"><img src="assets/images/trailer-icon.png" alt=""></span>
+                      Trailers
+                    </div>
+                  </div>
+                  <div class="last-thumb">
+                    <div class="thumb">
+                      <span class="icon"><img src="assets/images/service-icon.png" alt=""></span>
+                      Other Services
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Dynamic Listings Container -->
+              <div class="col-lg-9">
+                <div id="listingsContainer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add Registration Section -->
+        <div class="registration-section">
+          <h3>List Your Vehicle or Service</h3>
+          <p>Want to offer your truck, ute, trailer, or other services? Register below to connect with customers in New Zealand.</p>
+          <a href="register.html" class="main-button">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <!-- Footer content remains the same -->
+</footer>
+
+<!-- Scripts -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/animation.js"></script>
+<script src="assets/js/imagesloaded.js"></script>
+<script src="assets/js/custom.js"></script>
+
+<!-- Add this new script for handling dynamic listings -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    loadListings();
+  });
+
+  function loadListings() {
+    // This function would fetch listings from your backend/database
+    fetch('/api/listings')
+      .then(response => response.json())
+      .then(listings => {
+        displayListings(listings);
+      })
+      .catch(error => {
+        console.error('Error loading listings:', error);
+        document.getElementById('listingsContainer').innerHTML =
+          '<p class="text-center">No listings available at the moment. Be the first to register!</p>';
+      });
+  }
+
+  function displayListings(listings) {
+    const container = document.getElementById('listingsContainer');
+    if (!listings || listings.length === 0) {
+      container.innerHTML = '<p class="text-center">No listings available at the moment. Be the first to register!</p>';
+      return;
+    }
+
+    const listingsHTML = listings.map(listing => `
+      <div class="listing-item">
+        <div class="left-image">
+          <img src="${listing.image || 'assets/images/default-vehicle.jpg'}" alt="${listing.title}">
+          <div class="hover-content">
+            <div class="main-white-button">
+              <a href="contact.html?provider=${listing.id}"><i class="fa fa-eye"></i> Contact Provider</a>
+            </div>
+          </div>
+        </div>
+        <div class="right-content align-self-center">
+          <a href="#"><h4>${listing.title}</h4></a>
+          <h6>by: ${listing.providerName}</h6>
+          <span class="price">
+            <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+            $${listing.rate} / ${listing.rateUnit}
+          </span>
+          <span class="details">Location: <em>${listing.location}</em></span>
+          <span class="info">
+            <img src="assets/images/availability-icon.png" alt="">
+            Available: ${listing.availability}
+          </span>
+        </div>
+      </div>
+    `).join('');
+
+    container.innerHTML = listingsHTML;
+  }
+
+  function filterListings() {
+    const selectedService = document.getElementById('chooseCategory').value;
+    // This would fetch filtered listings from your backend
+    fetch(`/api/listings?service=${selectedService}`)
+      .then(response => response.json())
+      .then(listings => {
+        displayListings(listings);
+      })
+      .catch(error => {
+        console.error('Error filtering listings:', error);
+      });
+  }
+</script>
+<footer>
+  <div class="container">
+    <div class="row">
+      <!-- About Section -->
+      <div class="col-lg-4">
+        <div class="about">
+          <div class="logo">
+            <img src="assets/images/black-logo.png" alt="Plot Listing">
+          </div>
+        </div>
+      </div>
+
+      <!-- Helpful Links Section -->
+      <div class="col-lg-4">
+        <div class="helpful-links">
+          <h4>Helpful Links</h4>
+          <div class="row">
+            <div class="col-lg-6 col-sm-6">
+              <ul>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Listing</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Awards</a></li>
+                <li><a href="#">Useful Sites</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Us Section -->
+      <div class="col-lg-4">
+        <div class="contact-us">
+          <h4>Contact Us</h4>
+          <p>Wellington, New Zealand</p>
+          <div class="row">
+            <div class="col-lg-6">
+              <a href="#">010-020-0340</a>
+            </div>
+            <div class="col-lg-6">
+              <a href="#">090-080-0760</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub Footer -->
+      <div class="col-lg-12">
+        <div class="sub-footer">
+          <p>
+            Copyright © 2024 KiwiHaul Co., Ltd. All Rights Reserved.
+            <br>
+            Design: <a rel="nofollow" href="https://kiwihaul.com" title="CSS Templates">KiwiHaul</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/animation.js"></script>
+<script src="assets/js/imagesloaded.js"></script>
+<script src="assets/js/custom.js"></script>
+
+</body>
+</html>
